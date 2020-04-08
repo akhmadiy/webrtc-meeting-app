@@ -19,9 +19,24 @@ roomSocket.emit('join', {
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('roomName').innerHTML = roomData.name;
+  let streams = [...document.getElementsByClassName('streams')];
+  console.log(streams.length);
+  streams.map(item => {
+    if (!item.srcObject) {
+      console.log('ok');
+      const li = document.createElement('li');
+      li.classList.add("fas");
+      li.classList.add("fa-user");
+      li.classList.add("icon");
+      li.classList.add("mt-5");
+      li.classList.add("mb-5");
+      item.innerHTML = '';
+      item.appendChild(li);
+    }
+  });
 });
 
 function endCall() {
   roomSocket.disconnect();
-  window.location.href = '/users/register'
+  window.location.href = '/users/login'
 }
