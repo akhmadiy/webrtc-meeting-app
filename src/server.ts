@@ -11,7 +11,7 @@ import controllers from './socketControllers';
 
 import { createUser, IUser } from './data/users';
 import { createRoom, IRoom, getRooms, findByUserRoom } from './data/rooms';
-
+import { RoomSessions } from './data/cache';
 
 const app: any = express();
 const server = createServer(app);
