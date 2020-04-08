@@ -1,12 +1,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  const registerForm = document.querySelector('.register');
+  const registerForm = document.querySelector('#register');
 
   registerForm.addEventListener('submit', e => {
     e.preventDefault();
     const user = {
       username: e.target.username.value,
-      fullname: e.target.fullname.value,
+      fullName: e.target.fullName.value,
       password: e.target.password.value
     };
     console.log(user);
@@ -27,5 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log(err);
     })
   });
-  
+
 });
