@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <form class="create-room">
+        <div>
+          <label for="">Room Name</label>
+          <input type="text" name="name">
+        </div>
+        <div>
+          <label for="">Room type</label>
+          <select name="type" >
+            <option selected value="public">Public</option>
+            <option value="privat">Private</option>
+          </select>
+        </div>
+        <!-- <div>
+          <label for="">Password</label>
+          <input type="text" name="password">
+        </div> -->
+        <button>Create</button>
+      </form>
+    </div>
+  </div>
+  <div>
+    <ul class="romms-list"></ul>
+  </div>
+  <script src="../../scripts/user.js"></script>
+</html>
